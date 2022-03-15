@@ -1,0 +1,21 @@
+.footer {
+  background-color: var(--black);
+  padding: 4.5rem 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-nav {
+  justify-items: center;
+  margin-bottom: 4rem;
+}
+
+.footer-nav img {
+  margin-bottom: 3rem;
+}
+
+.footer-nav .nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

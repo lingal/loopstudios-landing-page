@@ -1,18 +1,18 @@
+import Hamburger from './Hamburger';
+import Logo from './Logo';
+import './Navbar.css';
+
 const Navbar = () => {
   return (
-    <nav>
-      <div className="nav-logo">
-        <img src={require('../images/logo.svg')} alt="loopstudios logo" />
-      </div>
-      <button className="hamburger-btn">
-        <img src={require('../images/icon-hamburger.svg')} alt="hamburger" />
-      </button>
+    <nav className="navbar">
+      <Logo />
+      <Hamburger />
       <div className="desktop-nav">
-        <a href="">About</a>
-        <a href="">Careers</a>
-        <a href="">Events</a>
-        <a href="">Products</a>
-        <a href="">Support</a>
+        <a href="none">About</a>
+        <a href="none">Careers</a>
+        <a href="none">Events</a>
+        <a href="none">Products</a>
+        <a href="none">Support</a>
       </div>
     </nav>
   );

@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --gray: hsl(0, 0%, 55%);
+  --darkGray: hsl(0, 0%, 41%);
+  --accent: hsla(0, 0%, 0%, 0.39);
+  --ffBody: 'Alata', sans-serif;
+  --ffHeading: 'Josefin Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: clamp(0.7375rem, 4vw, 0.9375rem);
+  text-size-adjust: 100%;
+}
+
+body {
+  color: var(--darkGray);
+  font-family: var(--ffBody);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--ffHeading);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--ffHeading);
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+h1 {
+  color: var(--white);
+}
+h2 {
+  font-size: 2rem;
+  color: var(--black);
+}
+h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+section {
+  padding-top: 7.75rem;
+}
+.grid-container {
+  display: grid;
 }

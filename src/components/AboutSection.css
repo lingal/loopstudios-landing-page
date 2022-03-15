@@ -1,0 +1,17 @@
+.about {
+  grid-template-columns: 85vw;
+  justify-content: center;
+  grid-row-gap: 3.875rem;
+}
+.about-text {
+  text-align: center;
+  
+}
+.about-text h2 {
+  margin-bottom: 1.1875em;
+}
+.about-text p {
+  opacity: 0.7;
+  line-height: 1.6;
+  padding-inline: 1em;
+}

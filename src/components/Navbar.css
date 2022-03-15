@@ -1,0 +1,22 @@
+.navbar {
+  position: fixed;
+  align-items: center;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 85vw;
+}
+.navbar .desktop-nav {
+  display: none;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+@media screen and (min-width: 56em) {
+  .navbar .desktop-nav {
+    display: flex;
+    gap: 2rem;
+    
+  }
+}

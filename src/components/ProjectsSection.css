@@ -1,0 +1,23 @@
+.projects {
+  grid-template-columns: 85vw;
+  justify-content: center;
+  margin-bottom: 7rem;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.projects-container {
+  gap: 1.87rem;
+}
+
+.projects button[type=button] {
+  justify-self: center;
+  padding: 1rem 0;
+  width: 12rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: var(--white);
+  margin-top: 2.75rem;
+}

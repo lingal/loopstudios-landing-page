@@ -1,0 +1,9 @@
+.header {
+  min-height: 100vh;
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  grid-template-columns: 85vw;
+  justify-content: center;
+}
