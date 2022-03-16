@@ -7,3 +7,11 @@
   grid-template-columns: 85vw;
   justify-content: center;
 }
+
+@media screen and (min-width:56rem){
+  .header {
+  min-height: 100vh;
+  background-image: url(../images/desktop/image-hero.jpg);
+ 
+}
+}

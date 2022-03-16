@@ -3,15 +3,50 @@
   justify-content: center;
   grid-row-gap: 3.875rem;
 }
+.about-img img {
+  width: 100%;
+}
 .about-text {
   text-align: center;
-  
 }
 .about-text h2 {
+  font-size: 2rem;
   margin-bottom: 1.1875em;
 }
 .about-text p {
   opacity: 0.7;
   line-height: 1.6;
   padding-inline: 1em;
+}
+
+@media screen and (min-width: 59em) {
+  .about {
+    width: 85vw;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+  }
+  .about-text {
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    grid-row: 3/6;
+    grid-column: 2/3;
+    width: 40vw;
+    padding: 4em 4em 0 4em;
+    text-align: left;
+    display: grid;
+    align-content: flex-end;
+  }
+  .about-text p {
+    font-size: calc(1vw + 0.2rem);
+    padding-inline: 0;
+    line-height: 1.9;
+  }
+}
+@media screen and (min-width: 93em) {
+  .about-text {
+    padding: 20vh 20vh 0 20vh;
+  }
 }

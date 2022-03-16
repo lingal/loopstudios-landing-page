@@ -46,7 +46,7 @@ h1 {
   color: var(--white);
 }
 h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   color: var(--black);
 }
 h3 {

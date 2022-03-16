@@ -1,12 +1,27 @@
+import { useState, useEffect } from 'react';
 import './AboutSection.css';
-
+import mobile from '../images/mobile/image-interactive.jpg';
+import desktop from '../images/desktop/image-interactive.jpg';
 
 const AboutSection = () => {
-  const img = require('../images/mobile/image-interactive.jpg');
+  const [windowWdith, setWindowWidth] = useState(window.innerWidth);
+  const image = windowWdith >= 850 ? desktop : mobile;
+
+  useEffect(() => {
+    const handlerWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handlerWindowWidth);
+
+    return () => {
+      window.addEventListener('resize', handlerWindowWidth);
+    }
+  });
+
   return (
     <section className="about grid-container">
       <div className="about-img">
-        <img src={img} alt="A man wearing VR headset" />
+        <img src={image} alt="A man wearing VR headset" />
       </div>
       <div className="about-text">
         <h2>The leader in interactive VR</h2>

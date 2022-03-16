@@ -6,13 +6,18 @@
 .projects h2 {
   text-align: center;
   margin-bottom: 2em;
+  grid-area: title;
 }
 
 .projects-container {
   gap: 1.87rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.projects-container img{
+  width: 100%;
 }
 
-.projects button[type=button] {
+.projects button[type='button'] {
   justify-self: center;
   padding: 1rem 0;
   width: 12rem;
@@ -20,4 +25,34 @@
   letter-spacing: 4px;
   background-color: var(--white);
   margin-top: 2.75rem;
+}
+
+
+
+@media screen and (min-width: 53em) {
+  .projects {
+  grid-template-columns: 42.5vw 42.5vw;
+  
+  grid-template-areas: 
+  'title button'
+  'projects projects'
+  ;
+}
+.projects h2 {
+  grid-area: title;
+}
+.projects button[type='button'] {
+  grid-area: button;
+}
+
+.projects-container {
+  grid-area: projects;
+}
+}
+
+
+@media screen and (min-width: 93em) {
+  .projects-container {
+    grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  }
 }
