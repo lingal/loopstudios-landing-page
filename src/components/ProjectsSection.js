@@ -21,7 +21,13 @@ const ProjectsSection = () => {
 
   return (
     <section className="projects grid-container">
-      <h2>our creations</h2>
+      <div className="section-title">
+        <h2>our creations</h2>
+        <button type="button" className="upper-btn">
+          see all
+        </button>
+      </div>
+
       <div className="projects-container grid-container">
         {projectsData.map((project, index) => (
           <Project
@@ -31,7 +37,9 @@ const ProjectsSection = () => {
           ></Project>
         ))}
       </div>
-      <button type="button">see all</button>
+      <button type="button" className="lower-btn">
+        see all
+      </button>
     </section>
   );
 };

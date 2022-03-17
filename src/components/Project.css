@@ -15,8 +15,8 @@
 
 .project h3 {
   position: absolute;
-  bottom: 2rem;
-  left: 1.75rem;
+  bottom: clamp(5%, 2vw, 12%);
+  left: clamp(5%, 3vw, 15%);
   z-index: 999;
   width: 10ch;
 }

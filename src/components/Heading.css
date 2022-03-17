@@ -1,5 +1,6 @@
 .hero-heading {
-  font-size: clamp(1.25rem, 4vw, 2.25rem);
+  /* font-size: clamp(1.25rem, 4vw, 2.25rem); */
+  font-size: clamp(1.25rem, 3vw + 0.5rem, 2.25rem);
   border: 3px solid #fff;
   align-self: center;
   justify-self: center;
@@ -8,7 +9,7 @@
 }
 
 
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 59em) {
   .hero-heading {
     justify-self: left;
   }

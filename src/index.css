@@ -18,8 +18,9 @@
 }
 html {
   font-size: clamp(0.7375rem, 4vw, 0.9375rem);
-  text-size-adjust: 100%;
+  text-size-adjust: auto;
 }
+
 
 body {
   color: var(--darkGray);
@@ -46,15 +47,18 @@ h1 {
   color: var(--white);
 }
 h2 {
-  /* font-size: 2rem; */
   color: var(--black);
 }
 h3 {
-  font-size: 1.5rem;
   color: var(--white);
 }
 section {
   padding-top: 7.75rem;
+}
+@media screen and (min-width: 53em){
+  section {
+  padding-top: 11.75rem;
+}
 }
 .grid-container {
   display: grid;
