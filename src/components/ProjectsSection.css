@@ -11,10 +11,6 @@
   text-align: center;
 }
 
-.upper-btn {
-  display: none;
-}
-
 .projects-container {
   gap: 1.87rem;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -29,10 +25,19 @@
   width: 10rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  background-color: var(--white);
 }
-
+.upper-btn {
+  display: none;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.85s ease;
+}
+.upper-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
 .lower-btn {
+  background-color: var(--white);
   margin-top: 2.75rem;
 }
 
@@ -48,13 +53,14 @@
   .upper-btn {
     display: block;
   }
+  
 }
+
 @media screen and (min-width: 80em) {
-  .projects{
+  .projects {
     font-size: clamp(0.933rem, 2vw + 0.5rem, 1rem + 0.7vw);
   }
 }
-
 
 @media screen and (min-width: 93em) {
   .projects-container {

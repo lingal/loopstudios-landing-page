@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   align-items: center;
   top: 2.5rem;
   left: 0;
@@ -13,6 +13,100 @@
   display: none;
   font-size: clamp(1em, 2vw + 0.2em, 1.75em);
 }
+
+.navbar .desktop-nav a {
+  position: relative;
+}
+.navbar .desktop-nav a::after {
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  height: 0.1em;
+}
+
+.navbar .desktop-nav a::before {
+  content: '';
+  position: absolute;
+  top: 120%;
+  right: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  height: 0.1em;
+}
+
+@-webkit-keyframes scale-up-to-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+    width: 0.85em;
+  }
+}
+@keyframes scale-up-to-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+    width: 0.85em;
+  }
+}
+
+@-webkit-keyframes scale-up-to-right {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+    width: 0.85em;
+  }
+}
+@keyframes scale-up-to-right {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+    width: 0.85em;
+  }
+}
+
+.navbar .desktop-nav a:hover::before {
+  -webkit-animation: scale-up-to-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-to-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.navbar .desktop-nav a:hover::after {
+  -webkit-animation: scale-up-to-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-to-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 @media screen and (min-width: 56em) {
   .navbar .desktop-nav {
     display: flex;
@@ -21,5 +115,3 @@
     align-items: center;
   }
 }
-
-

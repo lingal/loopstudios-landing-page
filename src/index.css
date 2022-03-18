@@ -21,7 +21,6 @@ html {
   text-size-adjust: auto;
 }
 
-
 body {
   color: var(--darkGray);
   font-family: var(--ffBody);
@@ -55,10 +54,10 @@ h3 {
 section {
   padding-top: 7.75rem;
 }
-@media screen and (min-width: 53em){
+@media screen and (min-width: 53em) {
   section {
-  padding-top: 11.75rem;
-}
+    padding-top: 11.75rem;
+  }
 }
 .grid-container {
   display: grid;
